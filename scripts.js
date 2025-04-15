@@ -1,61 +1,51 @@
-function createPreviewCard(title, description, link, iconUrl) {
-    const card = document.createElement("div");
+function createPreviewCard(title, description, link, image) {
+    let card = document.createElement("div");
     card.classList.add("preview-card");
 
-    const cover = document.createElement("img");
+    let cover = document.createElement("img");
     cover.classList.add("preview-card-cover");
-    cover.src = iconUrl || "assets/placeholder.png";
-    cover.alt = title;
+    cover.src = image;
+    cover.alt = title + " preview image";
     card.appendChild(cover);
 
-    const content = document.createElement("div");
+    let content = document.createElement("div");
     content.classList.add("preview-card-content");
-    card.appendChild(content);
 
-    const header = document.createElement("div");
+    let header = document.createElement("div");
     header.classList.add("preview-card-header");
-    content.appendChild(header);
 
-    const h3 = document.createElement("h3");
+    let h3 = document.createElement("h3");
     h3.textContent = title;
     header.appendChild(h3);
 
-    const p = document.createElement("p");
+    let p = document.createElement("p");
     p.textContent = description;
     header.appendChild(p);
 
-    const footer = document.createElement("div");
-    footer.classList.add("preview-footer");
-    content.appendChild(footer);
+    content.appendChild(header);
 
-    const a = document.createElement("a");
+    let footer = document.createElement("div");
+    footer.classList.add("preview-footer");
+
+    let a = document.createElement("a");
     a.classList.add("preview-btn");
     a.href = link;
+    a.target = "_blank";
     a.textContent = "View";
     footer.appendChild(a);
+
+    content.appendChild(footer);
+    card.appendChild(content);
 
     return card;
 }
 
-
-async function loadProjects() {
-    try {
-        const response = await fetch('/api/projects');
-        const data = await response.json();
-        const section = document.querySelector('.preview-list-content');
-
-        data.data.forEach(project => {
-            const title = project.name;
-            const description = project.summary;
-            const link = project.links.websiteUrl;
-            const iconUrl = project.logo?.url || 'assets/placeholder.png';
-
-            const card = createPreviewCard(title, description, link, iconUrl);
-            section.appendChild(card);
-        });
-    } catch (error) {
-        console.error('Error loading projects:', error);
-    }
-}
-
-document.addEventListener('DOMContentLoaded', loadProjects);
+const section = document.querySelector(".preview-list-content");
+section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates the popular 'Just Enough Items (JEI)' mod with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils-jei", "https://media.forgecdn.net/avatars/847/270/638476130899474137.png"));
+section.appendChild(createPreviewCard("Fast Loading Screen Pack", "Removes the loading screen menu, allowing you to move your camera and mouse freely while loading the world or dimension.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack", "https://media.forgecdn.net/avatars/846/786/638474429245906013.png"));
+section.appendChild(createPreviewCard("Java Locate Command", "Simplifies locating structures or biomes by reducing the need to type coordinates manually.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command", "https://media.forgecdn.net/avatars/846/072/638471558173392288.png"));
+section.appendChild(createPreviewCard("Toggle Night Vision", "Enables better visibility in dark places without the need for torches.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision", "https://media.forgecdn.net/avatars/846/068/638471554688276251.png"));
+section.appendChild(createPreviewCard("Cape Physics Resource Pack", "Adds an animation that simulates 'Physics' to your personal cape.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/cape-physics-resource-pack", "https://media.forgecdn.net/avatars/843/695/638461828208595446.png"));
+section.appendChild(createPreviewCard("Minimap Resource Pack", "Displays an area around you as a 3D renderer using the structure renderer.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/minimap-resource-pack", "https://media.forgecdn.net/avatars/839/918/638448591423988988.png"));
+section.appendChild(createPreviewCard("Effect Display Overlay", "View active mob effects while moving.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay", "https://media.forgecdn.net/avatars/838/232/638442596018818856.png"));
+section.appendChild(createPreviewCard("Low Item Durability Warning", "Indicates when an item is about to break, preventing accidental tool breakage.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/low-item-durability-warning", "https://media.forgecdn.net/avatars/837/103/638438163486128992.png"));
