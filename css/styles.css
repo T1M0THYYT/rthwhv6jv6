@@ -85,7 +85,7 @@ header {
 .header-nav .header-nav-item:hover,
 .header-nav .header-nav-item:focus {
     background-color: var(--color-accent-light);
-    color: var(--color-accent-light-text);
+    color: var(--color-background-dark);
     outline: none;
 }
 
@@ -128,7 +128,7 @@ main {
     margin: 1.5rem auto;
     opacity: 0.3;
     padding-top: 4px;
-    border-radius: 2px; 
+    border-radius: 2px;
 }
 
 #creatorIntro {
@@ -239,6 +239,7 @@ main {
 .preview-btn:hover,
 .preview-btn:focus {
     background-color: var(--color-accent-light);
+    fill: var(--color-background-dark);
     color: var(--color-accent-light-text);
     outline: none;
 }
@@ -273,10 +274,21 @@ footer {
 
 .footer-icon {
     justify-content: center;
+    background-color: var(--color-background-dark);
+    border-radius: var(--border-radius-medium);
     width: 40px;
     fill: var(--color-accent-light-text);
     height: 40px;
     padding: 8px;
+    transition: all var(--transition-fast);
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+    background-color: var(--color-accent-light);
+    color: var(--color-accent-light-text);
+    fill: var(--color-background-dark);
+    outline: none;
 }
 
 .footer-icon svg {

@@ -1,12 +1,6 @@
-function createPreviewCard(title, description, link, image) {
+function createPreviewCard(title, description, link) {
     let card = document.createElement("div");
     card.classList.add("preview-card");
-
-    let cover = document.createElement("img");
-    cover.classList.add("preview-card-cover");
-    cover.src = image;
-    cover.alt = title + " preview image";
-    card.appendChild(cover);
 
     let content = document.createElement("div");
     content.classList.add("preview-card-content");
