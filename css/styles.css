@@ -1,20 +1,27 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu+Sans+Mono:ital,wght@0,400..700;1,400..700&display=swap');
 
+html {
+    scroll-behavior: smooth;
+}
+
 :root {
     --color-title: #E6E1E5;
-    --color-background: #1C1B1F;
+    --color-background: #1f1c27;
+
     --color-background-dark: #121212;
-    --color-background-light: #2A2A2E;
+    --color-background-light: #d1d1ec;
 
     --color-accent-light: #D0BCFF;
+    --color-accent-dark: #353042;
+
     --color-accent-light-text: #d3cde7;
-    --color-accent-dark-text: #bea5f8;
+    --color-accent-dark-text: #342d44;
 
     --border-radius-high: 28px;
     --border-radius-medium: 20px;
 
     --transition-fast: 0.2s;
-    --transition-medium: 0.3s;
+    --transition-medium: 0.5s;
 }
 
 
@@ -22,6 +29,20 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+}
+
+body.light-mode {
+    --color-title: #1f1c27;
+    --color-background: #E6E1E5;
+
+    --color-background-dark: #d1d1ec;
+    --color-background-light: #121212;
+
+    --color-accent-light: #353042;
+    --color-accent-dark: #D0BCFF;
+
+    --color-accent-light-text: #342d44;
+    --color-accent-dark-text: #d3cde7;
 }
 
 body {
@@ -116,17 +137,17 @@ main {
 
 
 .divider2 {
-    border-top: 4px solid var(--color-background-light);
+    border-top: 4px solid var(--color-background-dark);
     width: 90%;
     border-radius: 2px;
     margin: 1.5rem auto;
 }
 
 .divider1 {
-    border-top: 4px solid var(--color-accent-dark-text);
-    width: 80%;
+    border-top: 4px solid var(--color-background-dark);
+    width: 90%;
     margin: 1.5rem auto;
-    opacity: 0.3;
+    /* opacity: 0.3; */
     padding-top: 4px;
     border-radius: 2px;
 }
@@ -226,8 +247,8 @@ main {
     display: flex;
     align-items: center;
     text-decoration: none;
-    background-color: var(--color-background-light);
-    color: var(--color-accent-dark-text);
+    background-color: var(--color-background-dark);
+    color: var(--color-accent-light-text);
     border-radius: var(--border-radius-medium);
     font-weight: 500;
     gap: 10px;
@@ -238,9 +259,9 @@ main {
 
 .preview-btn:hover,
 .preview-btn:focus {
-    background-color: var(--color-accent-light);
-    fill: var(--color-background-dark);
-    color: var(--color-accent-light-text);
+    background-color: var(--color-background-light);
+    /* fill: var(--color-background-dark); */
+    color: var(--color-accent-dark-text);
     outline: none;
 }
 
@@ -270,6 +291,10 @@ footer {
 .footer-social-media {
     display: flex;
     gap: 10px;
+}
+
+.footer-copyright {
+    color: var(--color-accent-light-text);
 }
 
 .footer-icon {

@@ -1,3 +1,17 @@
+const toggleBtn = document.getElementById("themeToggle");
+const body = document.body;
+const savedTheme = localStorage.getItem("theme");
+if (savedTheme === "light") body.classList.add("light-mode");
+
+toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+
+toggleBtn.addEventListener("click", () => {
+    body.classList.toggle("light-mode");
+    localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
+    toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+
+});
+
 function createPreviewCard(title, description, link) {
     let card = document.createElement("div");
     card.classList.add("preview-card");
@@ -35,7 +49,7 @@ function createPreviewCard(title, description, link) {
 }
 
 const section = document.querySelector(".preview-list-content");
-section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates the popular 'Just Enough Items (JEI)' mod with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils-jei", "https://media.forgecdn.net/avatars/847/270/638476130899474137.png"));
+section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates the popular 'Just Enough Items (JEI)' mod with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils", "https://media.forgecdn.net/avatars/847/270/638476130899474137.png"));
 section.appendChild(createPreviewCard("Fast Loading Screen Pack", "Removes the loading screen menu, allowing you to move your camera and mouse freely while loading the world or dimension.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack", "https://media.forgecdn.net/avatars/846/786/638474429245906013.png"));
 section.appendChild(createPreviewCard("Java Locate Command", "Simplifies locating structures or biomes by reducing the need to type coordinates manually.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command", "https://media.forgecdn.net/avatars/846/072/638471558173392288.png"));
 section.appendChild(createPreviewCard("Toggle Night Vision", "Enables better visibility in dark places without the need for torches.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision", "https://media.forgecdn.net/avatars/846/068/638471554688276251.png"));
