@@ -65,7 +65,7 @@ function createPreviewCard(title, description, link, downloads, dateCreated) {
 
 
 const section = document.querySelector(".preview-list-content");
-section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates a popular Minecraft mod called 'Just Enough Items (JEI)' with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils-jei", "9.8K", "2024-11-17"));
+section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates a popular Minecraft mod called 'Just Enough Items (JEI)' with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils", "9.8K", "2024-11-17"));
 section.appendChild(createPreviewCard("Fast Loading Screen Pack", "This pack 'removes' the loading screen menu and allows you to freely move your camera and mouse while loading the world or dimension.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack", "26.8K", "2024-11-29"));
 section.appendChild(createPreviewCard("Java Locate Command", "Are you tired of constantly typing in structure or biome coordinates? This pack is the solution!", "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command", "1.0K", "2025-02-04"));
 section.appendChild(createPreviewCard("Toggle Night Vision", "Want to see caves but too lazy to get torches? This pack makes it easier for you to see in dark places without them!", "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision", "158.6K", "2025-01-22"));
