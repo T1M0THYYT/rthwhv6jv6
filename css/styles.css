@@ -21,9 +21,8 @@ html {
     --border-radius-medium: 20px;
 
     --transition-fast: 0.2s;
-    --transition-medium: 0.5s;
+    --transition-medium: 0.25s;
 }
-
 
 * {
     padding: 0;
@@ -249,6 +248,7 @@ main {
     text-decoration: none;
     background-color: var(--color-background-dark);
     color: var(--color-accent-light-text);
+    border: 2px solid var(--color-background-light);
     border-radius: var(--border-radius-medium);
     font-weight: 500;
     gap: 10px;
@@ -260,7 +260,7 @@ main {
 .preview-btn:hover,
 .preview-btn:focus {
     background-color: var(--color-background-light);
-    /* fill: var(--color-background-dark); */
+    border: 2px solid var(--color-background-dark);
     color: var(--color-accent-dark-text);
     outline: none;
 }

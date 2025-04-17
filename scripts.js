@@ -12,13 +12,14 @@ toggleBtn.addEventListener("click", () => {
 
 });
 
-function createPreviewCard(title, description, link) {
+function createPreviewCard(title, description, link, downloads, dateCreated) {
     let card = document.createElement("div");
     card.classList.add("preview-card");
-
+    // Content Container
     let content = document.createElement("div");
     content.classList.add("preview-card-content");
 
+    // Header: Title + Description
     let header = document.createElement("div");
     header.classList.add("preview-card-header");
 
@@ -30,8 +31,22 @@ function createPreviewCard(title, description, link) {
     p.textContent = description;
     header.appendChild(p);
 
+    // Meta Info: Downloads + Date
+    let meta = document.createElement("div");
+    meta.classList.add("preview-card-meta");
+
+    let downloadsInfo = document.createElement("p");
+    downloadsInfo.textContent = `Total Downloads: ${downloads}`;
+    meta.appendChild(downloadsInfo);
+
+    let dateInfo = document.createElement("p");
+    dateInfo.textContent = `Date Created: ${dateCreated}`;
+    meta.appendChild(dateInfo);
+
+    header.appendChild(meta);
     content.appendChild(header);
 
+    // Footer: View Button
     let footer = document.createElement("div");
     footer.classList.add("preview-footer");
 
@@ -48,12 +63,13 @@ function createPreviewCard(title, description, link) {
     return card;
 }
 
+
 const section = document.querySelector(".preview-list-content");
-section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates the popular 'Just Enough Items (JEI)' mod with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils", "https://media.forgecdn.net/avatars/847/270/638476130899474137.png"));
-section.appendChild(createPreviewCard("Fast Loading Screen Pack", "Removes the loading screen menu, allowing you to move your camera and mouse freely while loading the world or dimension.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack", "https://media.forgecdn.net/avatars/846/786/638474429245906013.png"));
-section.appendChild(createPreviewCard("Java Locate Command", "Simplifies locating structures or biomes by reducing the need to type coordinates manually.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command", "https://media.forgecdn.net/avatars/846/072/638471558173392288.png"));
-section.appendChild(createPreviewCard("Toggle Night Vision", "Enables better visibility in dark places without the need for torches.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision", "https://media.forgecdn.net/avatars/846/068/638471554688276251.png"));
-section.appendChild(createPreviewCard("Cape Physics Resource Pack", "Adds an animation that simulates 'Physics' to your personal cape.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/cape-physics-resource-pack", "https://media.forgecdn.net/avatars/843/695/638461828208595446.png"));
-section.appendChild(createPreviewCard("Minimap Resource Pack", "Displays an area around you as a 3D renderer using the structure renderer.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/minimap-resource-pack", "https://media.forgecdn.net/avatars/839/918/638448591423988988.png"));
-section.appendChild(createPreviewCard("Effect Display Overlay", "View active mob effects while moving.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay", "https://media.forgecdn.net/avatars/838/232/638442596018818856.png"));
-section.appendChild(createPreviewCard("Low Item Durability Warning", "Indicates when an item is about to break, preventing accidental tool breakage.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/low-item-durability-warning", "https://media.forgecdn.net/avatars/837/103/638438163486128992.png"));
+section.appendChild(createPreviewCard("Ui Utils [JEI]", "A Minecraft Bedrock texture pack that imitates a popular Minecraft mod called 'Just Enough Items (JEI)' with a bunch of neat features.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils-jei", "9.8K", "2024-11-17"));
+section.appendChild(createPreviewCard("Fast Loading Screen Pack", "This pack 'removes' the loading screen menu and allows you to freely move your camera and mouse while loading the world or dimension.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack", "26.8K", "2024-11-29"));
+section.appendChild(createPreviewCard("Java Locate Command", "Are you tired of constantly typing in structure or biome coordinates? This pack is the solution!", "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command", "1.0K", "2025-02-04"));
+section.appendChild(createPreviewCard("Toggle Night Vision", "Want to see caves but too lazy to get torches? This pack makes it easier for you to see in dark places without them!", "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision", "158.6K", "2025-01-22"));
+section.appendChild(createPreviewCard("Cape Physics Resource Pack", "This resource pack adds an animation that simulates 'Physics' to your personal cape.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/cape-physics-resource-pack", "1.3K", "2025-02-22"));
+section.appendChild(createPreviewCard("Minimap Resource Pack", "This is a very powerful resource pack for Minecraft Bedrock that uses the structure renderer to display an area around you as a 3D renderer.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/minimap-resource-pack", "29.2K", "2024-11-18"));
+section.appendChild(createPreviewCard("Effect Display Overlay", "View active mob effects while moving!", "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay", "5.4K", "2024-12-16"));
+section.appendChild(createPreviewCard("Low Item Durability Warning", "Tired of accidentally breaking your tools without realizing their low durability? Well, this pack is for you! This texture pack indicates when an item is about to break.", "https://www.curseforge.com/minecraft-bedrock/texture-packs/low-item-durability-warning", "973", "2024-11-26"));
