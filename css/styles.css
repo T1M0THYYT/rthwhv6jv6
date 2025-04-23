@@ -138,15 +138,17 @@ main {
 
 .section-title {
     line-height: 1;
-    max-width: 80%;
+    max-width: 100%;
     opacity: 0;
+    font-size: x-large;
     animation: showOpacity 1s forwards;
 }
 
 .section-subtitle {
     line-height: 1;
-    max-width: 80%;
+    max-width: 100%;
     opacity: 0;
+    font-size: medium;
     animation: showOpacity 1s forwards;
     padding-bottom: 10px;
 }
@@ -416,10 +418,6 @@ footer {
         flex-direction: column;
         gap: 16px;
         align-items: center;
-        text-align: center;
-    }
-
-    .first-profile {
         text-align: center;
     }
 }
