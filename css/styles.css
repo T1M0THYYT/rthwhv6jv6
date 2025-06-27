@@ -71,6 +71,15 @@ body {
     flex-direction: column;
 }
 
+body.desktop .nav {
+  display: flex;
+  flex-direction: row;
+}
+
+body.desktop .sidebar {
+  display: block !important;
+}
+
 /* Header */
 header {
     display: flex;
