@@ -9,45 +9,32 @@ toggleBtn.addEventListener("click", () => {
     body.classList.toggle("light-mode");
     localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
     toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
-
 });
 
-function createPreviewCard(title, description, link, downloads, dateCreated) {
-    let card = document.createElement("div");
+function createPreviewCard(title, description, link) {
+    const card = document.createElement("div");
     card.classList.add("preview-card");
 
-    let content = document.createElement("div");
+    const content = document.createElement("div");
     content.classList.add("preview-card-content");
 
-    let header = document.createElement("div");
+    const header = document.createElement("div");
     header.classList.add("preview-card-header");
 
     if (title) {
-        let h3 = document.createElement("h3");
+        const h3 = document.createElement("h3");
         h3.textContent = title;
         header.appendChild(h3);
     }
 
     if (description) {
-        let p = document.createElement("p");
+        const p = document.createElement("p");
         p.textContent = description;
         header.appendChild(p);
     }
 
-    let meta = document.createElement("div");
+    const meta = document.createElement("div");
     meta.classList.add("preview-card-meta");
-
-    if (downloads) {
-        let downloadsInfo = document.createElement("p");
-        downloadsInfo.textContent = `Total Downloads: ${downloads}`;
-        meta.appendChild(downloadsInfo);
-    }
-
-    if (dateCreated) {
-        let dateInfo = document.createElement("p");
-        dateInfo.textContent = `Date Created: ${dateCreated}`;
-        meta.appendChild(dateInfo);
-    }
 
     if (meta.children.length > 0) {
         header.appendChild(meta);
@@ -56,10 +43,10 @@ function createPreviewCard(title, description, link, downloads, dateCreated) {
     content.appendChild(header);
 
     if (link) {
-        let footer = document.createElement("div");
+        const footer = document.createElement("div");
         footer.classList.add("preview-footer");
 
-        let a = document.createElement("a");
+        const a = document.createElement("a");
         a.classList.add("preview-btn");
         a.href = link;
         a.target = "_blank";
@@ -73,7 +60,6 @@ function createPreviewCard(title, description, link, downloads, dateCreated) {
 
     return card;
 }
-
 
 function createSection(title, subtitle, projects = []) {
     const container = document.createElement("section");
@@ -94,8 +80,8 @@ function createSection(title, subtitle, projects = []) {
     section.classList.add("preview-list-content");
 
     for (const proj of projects) {
-        const { title, description, link, downloads, dateCreated } = proj;
-        section.appendChild(createPreviewCard(title, description, link, downloads, dateCreated));
+        const { title, description, link } = proj;
+        section.appendChild(createPreviewCard(title, description, link));
     }
 
     const divider = document.createElement("div");
@@ -110,71 +96,79 @@ function createSection(title, subtitle, projects = []) {
     return container;
 }
 
-const sectionsContainer = document.getElementById("sectionsContainer");
+const proj = document.getElementById("proj");
 const sections = [
     {
         title: "Here are some of my texture packs:",
         subtitle: "Click the 'View' button on a project to learn more.",
         projects: [
             {
-                title: "Ui Utils [JEI]",
-                description: "A Minecraft Bedrock texture pack that imitates a popular Minecraft mod called 'Just Enough Items (JEI)' with a bunch of neat features.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils",
-                downloads: "9.8K",
-                dateCreated: "2024-11-17"
+                title: "Quick Settings Hud",
+                description: "Overlay the settings screen in the HUD!",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/quick-settings-hud"
             },
             {
-                title: "Fast Loading Screen Pack",
-                description: "This pack 'removes' the loading screen menu and allows you to freely move your camera and mouse while loading the world or dimension.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack",
-                downloads: "26.8K",
-                dateCreated: "2024-11-29"
+                title: "Toggle ESP",
+                description: "A resource pack that allows you to see players/entities through walls and blocks!",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-esp"
+            },
+            {
+                title: "Fast Commands",
+                description: "A resource pack that adds a Command Panel inside the chat screen for easy access.",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-commands"
             },
             {
                 title: "Java Locate Command",
                 description: "Are you tired of constantly typing in structure or biome coordinates? This pack is the solution!",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command",
-                downloads: "1.0K",
-                dateCreated: "2025-02-04"
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-locate-command"
+            },
+            {
+                title: "Animated Hover Tooltips",
+                description: "Adds unnecessary animations and effects to the item tooltips.",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/animated-hover-tooltips"
+            },
+            {
+                title: "Ui Utils [JEI]",
+                description: "A Minecraft bedrock texture pack that imitates a popular Minecraft mod called \"Just Enough Items (JEI)\" with a bunch of neat features.",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils"
+            },
+            {
+                title: "Fast Loading Screen Pack",
+                description: "This pack \"removes\" the loading screen menu and allows you to freely move your camera and mouse while loading the world or dimension.",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/fast-loading-screen-pack"
             },
             {
                 title: "Toggle Night Vision",
-                description: "Want to see caves but too lazy to get torches? This pack makes it easier for you to see in dark places without them!",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision",
-                downloads: "158.6K",
-                dateCreated: "2025-01-22"
+                description: "Want to see caves but too lazy to get torches? This pack makes easier for you to see in dark places without them!",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision"
             },
             {
                 title: "Cape Physics Resource Pack",
                 description: "This resource pack adds an animation that simulates 'Physics' to your personal cape.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/cape-physics-resource-pack",
-                downloads: "1.3K",
-                dateCreated: "2025-02-22"
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/cape-physics-resource-pack"
             },
             {
                 title: "Minimap Resource Pack",
                 description: "This is a very powerful resource pack for Minecraft Bedrock that uses the structure renderer to display an area around you as a 3D renderer.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/minimap-resource-pack",
-                downloads: "29.2K",
-                dateCreated: "2024-11-18"
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/minimap-resource-pack"
             },
             {
                 title: "Effect Display Overlay",
                 description: "View active mob effects while moving!",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay",
-                downloads: "5.4K",
-                dateCreated: "2024-12-16"
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay"
             },
             {
                 title: "Low Item Durability Warning",
-                description: "Tired of accidentally breaking your tools without realizing their low durability? Well, this pack is for you! This texture pack indicates when an item is about to break.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/low-item-durability-warning",
-                downloads: "973",
-                dateCreated: "2024-11-26"
+                description: "Tired of accidentally breaking your tools without realizing their low durability? Well this pack is for you!",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/low-item-durability-warning"
             }
-
         ]
-    },
+    }
+]
+
+
+const projdisc = document.getElementById("proj-disc");
+const sectionsdisc = [
     {
         title: "Unreleased and Discontinued Projects:",
         subtitle: "These projects are not finished and (some) will not be available for download.",
@@ -222,5 +216,10 @@ const sections = [
 ];
 
 sections.forEach(sec => {
-    sectionsContainer.appendChild(createSection(sec.title, sec.subtitle, sec.projects));
+    proj.appendChild(createSection(sec.title, sec.subtitle, sec.projects));
 });
+
+sectionsdisc.forEach(sec => {
+    projdisc.appendChild(createSection(sec.title, sec.subtitle, sec.projects));
+});
+
