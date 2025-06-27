@@ -1,3 +1,5 @@
+document.body.classList.add("desktop");
+
 const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 const savedTheme = localStorage.getItem("theme");
