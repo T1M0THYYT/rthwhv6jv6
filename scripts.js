@@ -101,8 +101,8 @@ function createSection(title, subtitle, projects = []) {
 const proj = document.getElementById("proj");
 const sections = [
     {
-        title: "Here are some of my texture packs:",
-        subtitle: "Click the 'View' button on a project to learn more.",
+        title: "My Minecraft Bedrock Texture Packs:",
+        subtitle: "Click the 'View' button to see more details and download.",
         projects: [
             {
                 title: "Quick Settings Hud",
@@ -173,7 +173,7 @@ const projdisc = document.getElementById("proj-disc");
 const sectionsdisc = [
     {
         title: "Unreleased and Discontinued Projects:",
-        subtitle: "These projects are not finished and (some) will not be available for download.",
+        subtitle: "These are not finished and will NOT be available for download.",
         projects: [
             {
                 title: "Cyanide Config Manager (Android Apk)",
