@@ -86,14 +86,11 @@ function createSection(title, subtitle, projects = []) {
         section.appendChild(createPreviewCard(title, description, link));
     }
 
-    const divider = document.createElement("div");
-    divider.classList.add("divider1");
 
     header.appendChild(h1);
     header.appendChild(p);
     container.appendChild(header);
     container.appendChild(section);
-    container.appendChild(divider);
 
     return container;
 }
@@ -102,7 +99,7 @@ const proj = document.getElementById("proj");
 const sections = [
     {
         title: "My Minecraft Bedrock Texture Packs:",
-        subtitle: "Click the 'View' button to see more details and download.",
+        subtitle: "Projects I've made for Minecraft Bedrock. Click the 'View' button to see more details and download.",
         projects: [
             {
                 title: "Quick Settings Hud",
@@ -173,7 +170,7 @@ const projdisc = document.getElementById("proj-disc");
 const sectionsdisc = [
     {
         title: "Unreleased and Discontinued Projects:",
-        subtitle: "These are not finished and will NOT be available for download.",
+        subtitle: "These are not released to the public and has been discontinued for various reasons.",
         projects: [
             {
                 title: "Cyanide Config Manager (Android Apk)",
