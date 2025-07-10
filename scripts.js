@@ -4,13 +4,11 @@ const toggleBtn = document.getElementById("themeToggle");
 const body = document.body;
 const savedTheme = localStorage.getItem("theme");
 if (savedTheme === "light") body.classList.add("light-mode");
-
-toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
-
+// toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
 toggleBtn.addEventListener("click", () => {
     body.classList.toggle("light-mode");
     localStorage.setItem("theme", body.classList.contains("light-mode") ? "light" : "dark");
-    toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+    // toggleBtn.textContent = body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
 });
 
 function createPreviewCard(title, description, link) {

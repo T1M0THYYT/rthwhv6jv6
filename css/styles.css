@@ -274,17 +274,15 @@ section {
     background: var(--color-background-dark);
     border-radius: var(--border-radius-high);
     transition: all var(--transition-medium);
-    border: 1px solid var(--color-accent-dark);
     display: flex;
     flex-direction: column;
     gap: 16px;
-    /* color: var(--color-accent-dark); */
 }
 
 .preview-card:hover {
     transform: scale(1.01);
+    filter: drop-shadow(0 0 3px var(--color-background-light));
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
-    border: 1px solid var(--color-accent-light);
 }
 
 .preview-card:active {
@@ -345,9 +343,10 @@ section {
 }
 
 .preview-btn:hover {
-    background-color: var(--color-background-light);
-    border: 2px solid var(--color-background-dark);
-    color: var(--color-background-dark);
+    background-color: var(--color-accent-light);
+    border: 2px solid var(--color-background-light);
+    color: var(--color-accent-dark);
+    filter: drop-shadow(0 0 3px var(--color-background-light));
     outline: none;
 }
 
@@ -366,7 +365,7 @@ footer {
     display: flex;
     justify-content: space-between;
     background-color: var(--color-background);
-    color: var(--color-accent-dark-text);
+    /* color: var(--color-accent-dark-text); */
     font-size: 0.9rem;
     padding: 16px 20px;
     width: 100%;
@@ -379,7 +378,8 @@ footer {
 }
 
 .footer-copyright {
-    color: var(--color-accent-light);
+    color: var(--color-background-light);
+    font-size: 0.8rem;
 }
 
 .footer-icon {
