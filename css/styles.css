@@ -90,15 +90,14 @@ header {
     backdrop-filter: blur(5px);
     z-index: 6;
     width: 100%;
+    border-radius: 10px;
+    box-shadow: #0000003a 0px 4px 12px;
     display: flex;
     flex-direction: row;
-    /* background-color: var(--color-header); */
-    border-bottom: 1px solid var(--color-background-dark);
     transition: all var(--transition-medium);
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
     padding: 1rem 2rem;
     gap: 10px;
     width: 100%;
