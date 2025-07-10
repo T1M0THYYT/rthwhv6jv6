@@ -431,7 +431,7 @@ footer {
         opacity: 1;
     }
 }
-
+/*
 @media (max-width: 1024px) {
     .preview-card {
         flex-direction: column;
@@ -442,7 +442,7 @@ footer {
         max-width: 100%;
     }
 }
-
+ 
 @media (max-width: 768px) {
     main {
         margin: 0 1rem;
@@ -512,7 +512,7 @@ footer {
     }
 }
 
-
+ 
 @media (max-width: 600px) {
     .header-nav {
         flex-direction: column;
@@ -548,4 +548,4 @@ footer {
         height: 36px;
         padding: 6px;
     }
-}
+}*/
