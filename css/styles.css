@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    min-width: 720px;
+    min-width: 920px;
 }
 
 * {
@@ -296,6 +296,7 @@ main {
     padding: 16px;
     animation: showOpacity 1s forwards;
     width: 100%;
+    min-width: 300px;
     background: var(--color-background-dark);
     border-radius: var(--border-radius-high);
     transition: all var(--transition-medium);
@@ -447,17 +448,5 @@ footer {
 
     to {
         opacity: 1;
-    }
-}
-
-@media (max-width: 600px) {
-    .horizontal-card {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .horizontal-card img.preview-card-image {
-        width: 100%;
-        max-height: 200px;
     }
 }
