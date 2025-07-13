@@ -90,7 +90,7 @@ header {
     width: 100%;
     max-width: 1200px;
     border-radius: var(--border-radius-medium);
-    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
+    backdrop-filter: blur(5px) brightness(1.1) contrast(1.15);
     border: var(--color-header) 2px solid;
     z-index: 6;
     box-shadow: #0000003a 0px 4px 12px;
@@ -116,12 +116,10 @@ header {
     border-radius: var(--border-radius-low);
 }
 
-
 img {
     max-width: 100%;
     height: auto;
 }
-
 
 #headerText h2 {
     font-size: 1rem;
@@ -134,10 +132,7 @@ img {
     gap: 1rem;
 }
 
-
-
 .header-nav .header-nav-item {
-    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
     background-color: var(--color-background-dark);
     color: var(--color-title);
     font-size: 0.9rem;
@@ -149,12 +144,10 @@ img {
 }
 
 .header-nav .header-nav-item:hover {
-    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
     background-color: var(--color-accent-light);
     color: var(--color-background-dark);
     outline: none;
 }
-
 
 
 .footer-social-media {
@@ -186,9 +179,6 @@ img {
     fill: var(--color-background-dark);
     outline: none;
 }
-
-
-
 
 main {
     display: flex;
