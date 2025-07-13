@@ -90,7 +90,7 @@ header {
     width: 100%;
     max-width: 1200px;
     border-radius: var(--border-radius-medium);
-    backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
     border: var(--color-header) 2px solid;
     z-index: 6;
     box-shadow: #0000003a 0px 4px 12px;
@@ -100,8 +100,7 @@ header {
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
-    padding: 1rem 2rem;
-    gap: 10px;
+    padding: 0.5rem 1rem;
 }
 
 #headerText {
@@ -135,7 +134,10 @@ img {
     gap: 1rem;
 }
 
+
+
 .header-nav .header-nav-item {
+    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
     background-color: var(--color-background-dark);
     color: var(--color-title);
     font-size: 0.9rem;
@@ -147,10 +149,46 @@ img {
 }
 
 .header-nav .header-nav-item:hover {
+    backdrop-filter: blur(5px) brightness(1.2) contrast(1);
     background-color: var(--color-accent-light);
     color: var(--color-background-dark);
     outline: none;
 }
+
+
+
+.footer-social-media {
+    animation: showOpacity 1s forwards;
+    display: flex;
+    gap: 10px;
+}
+
+.footer-copyright {
+    color: var(--color-background-light);
+    animation: showOpacity 1s forwards;
+    font-size: 0.8rem;
+}
+
+.footer-icon {
+    justify-content: center;
+    background-color: var(--color-background-dark);
+    border-radius: var(--border-radius-medium);
+    width: 40px;
+    fill: var(--color-background-light);
+    height: 40px;
+    padding: 8px;
+    transition: all var(--transition-fast);
+}
+
+.footer-icon:hover,
+.footer-icon:focus {
+    background-color: var(--color-accent-light);
+    fill: var(--color-background-dark);
+    outline: none;
+}
+
+
+
 
 main {
     display: flex;
@@ -387,36 +425,6 @@ footer {
     padding: 16px 20px;
     width: 100%;
     margin-top: auto;
-}
-
-.footer-social-media {
-    animation: showOpacity 1s forwards;
-    display: flex;
-    gap: 10px;
-}
-
-.footer-copyright {
-    color: var(--color-background-light);
-    animation: showOpacity 1s forwards;
-    font-size: 0.8rem;
-}
-
-.footer-icon {
-    justify-content: center;
-    background-color: var(--color-background-dark);
-    border-radius: var(--border-radius-medium);
-    width: 40px;
-    fill: var(--color-background-light);
-    height: 40px;
-    padding: 8px;
-    transition: all var(--transition-fast);
-}
-
-.footer-icon:hover,
-.footer-icon:focus {
-    background-color: var(--color-accent-light);
-    fill: var(--color-background-dark);
-    outline: none;
 }
 
 .footer-icon svg {
