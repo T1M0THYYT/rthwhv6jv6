@@ -327,15 +327,18 @@ main {
     min-width: 300px;
     background: var(--color-background-dark);
     border-radius: var(--border-radius-high);
+    border: #00000000 solid 1px;
     transition: all var(--transition-medium);
     display: flex;
+    filter: saturate(0.8);
     flex-direction: column;
     gap: 16px;
 }
 
 .preview-card:hover {
     transform: translateY(-6px);
-    filter: drop-shadow(0 0 3px var(--color-background-light));
+    filter: contrast(1.15) saturate(1.2);
+    border: var(--color-accent-light) solid 1px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
 }
 
@@ -391,7 +394,7 @@ main {
     background-color: var(--color-accent-light);
     border: 1px solid #00000000;
     color: var(--color-accent-dark);
-    filter: drop-shadow(0 0 3px var(--color-background-light));
+    /* filter: drop-shadow(0 0 3px var(--color-background-light)); */
     outline: none;
 }
 
