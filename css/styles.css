@@ -336,10 +336,9 @@ main {
 }
 
 .preview-card:hover {
-    transform: translateY(-6px);
     filter: contrast(1.15) saturate(1.2);
     border: var(--color-accent-light) solid 1px;
-    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 
