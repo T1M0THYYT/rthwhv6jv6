@@ -136,7 +136,7 @@ const sections = [
             {
                 title: "Animated Hover Tooltips",
                 description: "Adds unnecessary animations and effects to the item tooltips.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/animated-hover-tooltips",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/animated-hover-text",
                 downloads: "2.2K",
                 dateCreated: "Mar 22, 2025",
                 image: "https://media.forgecdn.net/avatars/thumbnails/1238/209/256/256/638810579238682277_animated.gif"
@@ -144,7 +144,7 @@ const sections = [
             {
                 title: "Ui Utils [JEI]",
                 description: "A Minecraft bedrock texture pack that imitates a popular Minecraft mod called \"Just Enough Items (JEI)\" with a bunch of neat features.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils-jei",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/ui-utils",
                 downloads: "18.5K",
                 dateCreated: "Nov 17, 2024",
                 image: "https://media.forgecdn.net/avatars/thumbnails/1127/431/256/256/638685522076354600.png"
