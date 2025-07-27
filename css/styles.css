@@ -19,7 +19,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    /* min-width: 920px; */
+    min-width: 400px;
 }
 
 * {
@@ -453,7 +453,7 @@ footer {
 
 @media (max-width: 768px) {
     body {
-        min-width: 100%;
+        /* min-width: 100%; */
         font-size: 0.95rem;
     }
 
@@ -461,12 +461,13 @@ footer {
         flex-direction: column;
         padding: 1rem;
         text-align: center;
-        position: static;
-        transform: none;
+        /* position: static; */
+        /* transform: none; */
     }
 
     .header-nav {
-        flex-direction: column;
+        flex-direction: row;
+        align-items: center;
         gap: 0.5rem;
         margin-top: 1rem;
     }
@@ -484,6 +485,10 @@ footer {
 
     .preview-list-content {
         grid-template-columns: 1fr;
+    }
+
+    .preview-btn {
+        justify-content: center;
     }
 
     .preview-list-content .horizontal-card {
