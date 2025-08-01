@@ -1,3 +1,5 @@
+document.body.style.zoom = "0.8";
+
 function createPreviewCard(title, description, link, image) {
     const card = document.createElement("div");
     card.classList.add("preview-card", "horizontal-card"); // Add a modifier class
