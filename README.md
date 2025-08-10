@@ -1,2 +1,3 @@
-# rthwhv6jv6
-This a simple portfolio where you can find *almost* all my projects, texture packs, apps, etc.
+# T1M0THYYT's portfolio
+This a simple portfolio where you can find *almost* all of my projects, texture packs, apps, etc.
+You can also browse through my hobbies relating to computer programming. 
