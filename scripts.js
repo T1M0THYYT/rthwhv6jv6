@@ -88,6 +88,14 @@ const sections = [
         subtitle: "Projects I've made for Minecraft Bedrock. Click the 'View' button to see more details and download.",
         projects: [
             {
+                title: "Timer Hud",
+                description: "Want to see caves but too lazy to get torches? This pack makes easier for you to see in dark places without them!",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/timer-hud",
+                downloads: "None (Under Review)",
+                dateCreated: "Aug 10, 2025",
+                image: "images/placeholder.gif"
+            },
+            {
                 title: "Toggle Night Vision",
                 description: "Want to see caves but too lazy to get torches? This pack makes easier for you to see in dark places without them!",
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/toggle-night-vision",
