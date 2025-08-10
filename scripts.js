@@ -89,7 +89,7 @@ const sections = [
         projects: [
             {
                 title: "Timer Hud",
-                description: "Want to see caves but too lazy to get torches? This pack makes easier for you to see in dark places without them!",
+                description: "Display a timer at the top of the screen! Can also be used when speedrunning :p",
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/timer-hud",
                 downloads: "None (Under Review)",
                 dateCreated: "Aug 10, 2025",
