@@ -10,7 +10,7 @@ function createPreviewCard({ title, description, link, image, video }) {
         const img = document.createElement("img");
         img.src = image;
         img.alt = title || "Preview image";
-        img.classList.add("preview-card-image");
+        img.classList.add("preview-card-image-v2");
 
         img.style.cursor = "pointer";
 
