@@ -6,7 +6,6 @@ function createPreviewCard({ title, description, link, image, video }) {
 
     let videoContainer, vid;
 
-    // Optional image (thumbnail/screenshot)
     if (image) {
         const img = document.createElement("img");
         img.src = image;
@@ -15,7 +14,6 @@ function createPreviewCard({ title, description, link, image, video }) {
 
         img.style.cursor = "pointer";
 
-        // Clicking image → enlarge fullscreen
         img.addEventListener("click", () => {
             const overlay = document.createElement("div");
             overlay.classList.add("image-overlay");
@@ -25,7 +23,6 @@ function createPreviewCard({ title, description, link, image, video }) {
             enlargedImg.alt = title || "Preview image";
             enlargedImg.classList.add("enlarged-image");
 
-            // Click overlay to close
             overlay.addEventListener("click", () => {
                 document.body.removeChild(overlay);
             });
@@ -37,7 +34,6 @@ function createPreviewCard({ title, description, link, image, video }) {
         card.appendChild(img);
     }
 
-    // Optional video
     if (video) {
         videoContainer = document.createElement("div");
         videoContainer.classList.add("preview-video-container");
@@ -47,7 +43,6 @@ function createPreviewCard({ title, description, link, image, video }) {
         vid.controls = true;
         vid.preload = "metadata";
 
-        // If no screenshot, show video expanded immediately
         if (!image) {
             videoContainer.classList.add("expanded");
         }
@@ -56,7 +51,6 @@ function createPreviewCard({ title, description, link, image, video }) {
         card.appendChild(videoContainer);
     }
 
-    // Text content
     const content = document.createElement("div");
     content.classList.add("preview-card-content");
 
@@ -77,7 +71,6 @@ function createPreviewCard({ title, description, link, image, video }) {
 
     content.appendChild(header);
 
-    // Footer link
     if (link) {
         const footer = document.createElement("div");
         footer.classList.add("preview-footer");
@@ -96,7 +89,6 @@ function createPreviewCard({ title, description, link, image, video }) {
     return card;
 }
 
-// Section creator stays same
 function createSection(title, subtitle, projects = []) {
     const container = document.createElement("section");
     container.classList.add("dynamic-section");
@@ -129,23 +121,33 @@ function createSection(title, subtitle, projects = []) {
 
 const sections = [
     {
-        title: "Windows shenanigans",
-        subtitle: "malware payload recreation and whatnot.",
+        title: "Programming Shenanigans",
+        subtitle: "Malware recreation, game development, and some random computer related stuff.",
         projects: [
             {
-                title: "gdi thing",
-                description: "Click the thumbnail to expand the video.",
+                title: "gdi manipulation",
+                description: "A recreation of visual payloads from solaris.exe, written in c",
                 video: "videos/test.mkv"
             },
             {
                 title: "gdi v2",
-                description: "Flashing lights, random error sounds, distortion and etc.",
+                description: "Added flashing lights, random error sounds, distortion and etc.",
                 video: "videos/test2.mp4"
             },
             {
-                title: "mandelbrot??",
-                description: "interesting stuff",
+                title: "Mandelbrot",
+                description: "A Mandelbrot set rendered using C.",
                 image: "images/mandelbrot.png"
+            },
+            {
+                title: "Doom Style Game",
+                description: "A simple game written in c and built using WINAPI functions.",
+                video: "videos/2dshooter.mp4"
+            },
+            {
+                title: "3D Game??",
+                description: "The same 'doom' style game but with a tweaked raycasting function. Also added procedural map generation.",
+                video: "videos/3dshooter.mkv"
             }
         ]
     }

@@ -306,11 +306,11 @@ main {
     color: currentColor;
 }
 
-    .preview-list-content .horizontal-card {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 20px;
-    }
+.preview-list-content .horizontal-card {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 20px;
+}
 
 .preview-list-content .horizontal-card img.preview-card-image {
     max-height: 160px;
@@ -458,6 +458,9 @@ footer {
 
 .preview-card-image {
     cursor: pointer;
+    min-width: 350px;
+    max-width: 350px;
+    border-radius: 8px;
 }
 
 .image-overlay {
