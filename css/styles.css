@@ -139,15 +139,43 @@ img {
 	text-decoration: none;
 	border-radius: var(--border-radius-high);
 	font-weight: bold;
+	border: #00000000 solid 1px;
 	padding: 6px 14px;
+	animation: showOpacity 1s forwards;
 	transition: all var(--transition-fast);
 }
 
 .header-nav .header-nav-item:hover {
-	background-color: var(--color-accent-light);
-	color: var(--color-background-dark);
-	outline: none;
+	/* color: var(--color-background-light); */
+	filter: contrast(1.15) saturate(2);
+	border: var(--color-accent-light) solid 1px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
+
+
+.preview-card {
+	box-sizing: border-box;
+	padding: 16px;
+	animation: showOpacity 1s forwards;
+	width: 100%;
+	min-width: 300px;
+	background: var(--color-background-dark);
+	border-radius: var(--border-radius-high);
+	border: #00000000 solid 1px;
+	transition: all var(--transition-medium);
+	display: flex;
+	filter: saturate(0.8);
+	flex-direction: column;
+	gap: 16px;
+}
+
+.preview-card:hover {
+	filter: contrast(1.15) saturate(1.2);
+	border: var(--color-accent-light) solid 1px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+
 
 
 .footer-social-media {
@@ -169,15 +197,17 @@ img {
 	width: 40px;
 	fill: var(--color-background-light);
 	height: 40px;
+	border: #00000000 solid 1px;
 	padding: 8px;
-	transition: all var(--transition-fast);
+	animation: showOpacity 1s forwards;
+	transition: all var(--transition-medium);
+
 }
 
-.footer-icon:hover,
-.footer-icon:focus {
-	background-color: var(--color-accent-light);
-	fill: var(--color-background-dark);
-	outline: none;
+.footer-icon:hover {
+	filter: contrast(1.15) saturate(2);
+	border: var(--color-accent-light) solid 1px;
+	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
 }
 
 main {
@@ -319,27 +349,6 @@ main {
 	object-fit: cover;
 }
 
-.preview-card {
-	box-sizing: border-box;
-	padding: 16px;
-	animation: showOpacity 1s forwards;
-	width: 100%;
-	min-width: 300px;
-	background: var(--color-background-dark);
-	border-radius: var(--border-radius-high);
-	border: #00000000 solid 1px;
-	transition: all var(--transition-medium);
-	display: flex;
-	filter: saturate(0.8);
-	flex-direction: column;
-	gap: 16px;
-}
-
-.preview-card:hover {
-	filter: contrast(1.15) saturate(1.2);
-	border: var(--color-accent-light) solid 1px;
-	box-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
-}
 
 
 .preview-card-content {

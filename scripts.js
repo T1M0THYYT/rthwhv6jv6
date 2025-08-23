@@ -89,7 +89,7 @@ const sections = [
         projects: [
             {
                 title: "Timer Hud",
-                description: "Display a timer at the top of the screen! Can also be used when speedrunning :pm",
+                description: "Display a timer at the top of the screen! Can also be used when speedrunning :p",
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/timer-hud",
                 downloads: "90",
                 dateCreated: "Aug 10, 2025",
