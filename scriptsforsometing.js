@@ -148,6 +148,11 @@ const sections = [
                 title: "3D Game??",
                 description: "The same 'doom' style game but with a tweaked raycasting function. Also added procedural map generation.",
                 video: "videos/3dshooter.mkv"
+            },
+            {
+                title: "3D Voxel Game",
+                description: "A project written in cpp with openGL. Procedural generation of voxel landscapes and block-based rendering.",
+                video: "videos/voxelgame.mkv"
             }
         ]
     }
