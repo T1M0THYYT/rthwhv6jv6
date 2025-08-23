@@ -89,11 +89,11 @@ const sections = [
         projects: [
             {
                 title: "Timer Hud",
-                description: "Display a timer at the top of the screen! Can also be used when speedrunning :p",
+                description: "Display a timer at the top of the screen! Can also be used when speedrunning :pm",
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/timer-hud",
-                downloads: "None (Under Review)",
+                downloads: "90",
                 dateCreated: "Aug 10, 2025",
-                image: "images/placeholder.gif"
+                image: "https://media.forgecdn.net/attachments/description/null/description_23c5781c-0dc1-4391-a3da-14f3b2af35ea.png"
             },
             {
                 title: "Toggle Night Vision",
