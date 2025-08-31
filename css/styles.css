@@ -1,6 +1,9 @@
+
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
+
 :root {
+  
   --color-primary: #dfefff;
   --color-background: #0d1b2a;
   --color-surface: #1b263b;
@@ -9,6 +12,7 @@
   --color-accent-dark: #133b5c;
   --color-text-muted: #a9c5e8;
 
+  
   --color-primary-light: #0d1b2a;
   --color-background-light: #f2f9ff;
   --color-surface-light-theme: #dceeff;
@@ -16,24 +20,28 @@
   --color-accent-light: #003f6b;
   --color-accent-light-theme: #62b6f7;
 
+  
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
 
+  
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 
+  
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 
+  
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
 
-
+  
   --z-header: 100;
   --z-modal: 1000;
 }
@@ -112,7 +120,7 @@ a:hover {
   transform: translateX(-50%);
   width: calc(100% - 2rem);
   max-width: 1200px;
-
+  
   backdrop-filter: blur(10px);
   border: 2px solid var(--color-surface);
   border-radius: var(--radius-lg);
@@ -353,16 +361,16 @@ a:hover {
   align-items: center;
   gap: var(--space-xs);
   padding: 0.5rem 1rem;
-  background-color: var(--color-accent-light);
-  color: var(--color-accent-dark);
+  background-color: var(--color-accent-dark);
+  color: var(--color-primary);
   border-radius: var(--radius-md);
   font-weight: 500;
   transition: all var(--transition-fast);
 }
 
 .project-link:hover {
-  background-color: var(--color-accent-dark);
-  color: var(--color-accent-light);
+  background-color: var(--color-accent);
+  color: var(--color-accent-dark);
   transform: translateY(-2px);
 }
 
