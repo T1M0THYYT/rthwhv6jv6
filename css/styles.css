@@ -1,9 +1,6 @@
-/* Import Google Fonts */
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 
-/* CSS Custom Properties */
 :root {
-  /* Colors - Dark Theme */
   --color-primary: #dfefff;
   --color-background: #0d1b2a;
   --color-surface: #1b263b;
@@ -12,7 +9,6 @@
   --color-accent-dark: #133b5c;
   --color-text-muted: #a9c5e8;
 
-  /* Colors - Light Theme */
   --color-primary-light: #0d1b2a;
   --color-background-light: #f2f9ff;
   --color-surface-light-theme: #dceeff;
@@ -20,33 +16,29 @@
   --color-accent-light: #003f6b;
   --color-accent-light-theme: #62b6f7;
 
-  /* Spacing */
   --space-xs: 0.5rem;
   --space-sm: 1rem;
   --space-md: 1.5rem;
   --space-lg: 2rem;
   --space-xl: 3rem;
 
-  /* Border Radius */
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 24px;
 
-  /* Transitions */
   --transition-fast: 0.2s ease;
   --transition-normal: 0.3s ease;
 
-  /* Shadows */
   --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.1);
   --shadow-md: 0 4px 16px rgba(0, 0, 0, 0.15);
   --shadow-lg: 0 8px 32px rgba(0, 0, 0, 0.2);
 
-  /* Z-index */
+
   --z-header: 100;
   --z-modal: 1000;
 }
 
-/* Light Theme Override */
+
 body.light-mode {
   --color-primary: var(--color-primary-light);
   --color-background: var(--color-background-light);
@@ -57,7 +49,7 @@ body.light-mode {
   --color-text-muted: var(--color-accent-light);
 }
 
-/* Reset and Base Styles */
+
 *,
 *::before,
 *::after {
@@ -86,7 +78,7 @@ body {
   transition: background-color var(--transition-normal), color var(--transition-normal);
 }
 
-/* Typography */
+
 h1,
 h2,
 h3,
@@ -112,7 +104,7 @@ a:hover {
   color: var(--color-accent);
 }
 
-/* Layout Components */
+
 .header {
   position: fixed;
   top: var(--space-sm);
@@ -120,7 +112,7 @@ a:hover {
   transform: translateX(-50%);
   width: calc(100% - 2rem);
   max-width: 1200px;
-  /* background: var(--color-background); */
+
   backdrop-filter: blur(10px);
   border: 2px solid var(--color-surface);
   border-radius: var(--radius-lg);
@@ -156,7 +148,7 @@ a:hover {
   white-space: nowrap;
 }
 
-/* Navigation */
+
 .nav {
   position: relative;
 }
@@ -205,7 +197,7 @@ a:hover {
   box-shadow: var(--shadow-md);
 }
 
-/* Theme Toggle */
+
 .theme-toggle {
   background: var(--color-surface-light);
   border: none;
@@ -226,7 +218,7 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* Main Content */
+
 .main {
   flex: 1;
   padding: calc(80px + var(--space-lg)) var(--space-sm) var(--space-lg);
@@ -235,7 +227,7 @@ a:hover {
   width: 100%;
 }
 
-/* Hero Section */
+
 .hero {
   background-color: var(--color-surface);
   border-radius: var(--radius-lg);
@@ -278,7 +270,7 @@ a:hover {
   margin: 0 auto;
 }
 
-/* Project Cards */
+
 .projects-section,
 .archived-section {
   margin-bottom: var(--space-xl);
@@ -374,7 +366,7 @@ a:hover {
   transform: translateY(-2px);
 }
 
-/* Footer */
+
 .footer {
   background-color: var(--color-surface);
   padding: var(--space-lg);
@@ -420,7 +412,7 @@ a:hover {
   transform: scale(1.1);
 }
 
-/* Responsive Design */
+
 @media (min-width: 768px) {
   .projects-grid {
     grid-template-columns: repeat(auto-fit, minmax(600px, 1fr));
@@ -551,7 +543,7 @@ a:hover {
   }
 }
 
-/* Animations */
+
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -570,7 +562,7 @@ a:hover {
   animation: fadeInUp 0.6s ease-out forwards;
 }
 
-/* Video and Image Overlay Styles */
+
 .video-container {
   width: 120px;
   height: 120px;
@@ -623,7 +615,7 @@ a:hover {
   }
 }
 
-/* Utility Classes */
+
 .sr-only {
   position: absolute;
   width: 1px;
