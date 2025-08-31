@@ -80,7 +80,7 @@ const projectsData = [
         title: "Effect Display Overlay",
         description: "View active mob effects while moving!",
         link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/effect-display-overlay",
-        image: "https://media.forgecdn.net/avatars/thumbnails/1137/254/256/256/638699310946140265.png"
+        image: "https://media.forgecdn.net/avatars/thumbnails/1137/254/256/256/638699310946160265.png"
       },
       {
         title: "Low Item Durability Warning",
