@@ -1,5 +1,7 @@
 # T1M0THY's Portfolio
 
+(ReadME is **AI** generated, couldnt be fucked updating this everytime lol)
+
 A modern, responsive portfolio website showcasing Minecraft Bedrock projects and other creations.
 
 ## ✨ Features
