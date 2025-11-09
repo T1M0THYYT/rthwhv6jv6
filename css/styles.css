@@ -22,7 +22,7 @@
     --radius-md: 16px;
     --radius-lg: 24px;
     --transition-fast: .4s ease;
-    --transition-normal: .5s ease;
+    --transition-fast: .5s ease;
     --shadow-sm: 0 2px 8px rgba(0, 0, 0, .1);
     --shadow-md: 0 4px 16px rgba(0, 0, 0, .15);
     --shadow-lg: 0 8px 32px rgba(0, 0, 0, .2);
@@ -34,8 +34,8 @@
     position: fixed;
     bottom: 2rem;
     right: 2rem;
-    background: #6bbcfb;
-    color: #133b5c;
+    background: var(--color-surface-light);
+    color: var(--color-primary);
     border: none;
     border-radius: 50%;
     width: 48px;
@@ -55,6 +55,9 @@
 }
 
 #scrollTop:hover {
+    background-color: var(--color-accent);
+    color: var(--color-accent-dark);
+    transform: translateY(-2px);
     transform: scale(1.1);
 }
 
@@ -79,7 +82,7 @@ body.light-mode {
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-accent) var(--color-background)
+    scrollbar-color: var(--color-accent) var(--color-surface)
 }
 
 body {
@@ -93,7 +96,7 @@ body {
     display: flex;
     flex-direction: column;
     overflow-x: hidden;
-    transition: background-color var(--transition-normal), color var(--transition-normal)
+    transition: background-color var(--transition-fast), color var(--transition-fast)
 }
 
 h1,
@@ -146,7 +149,7 @@ a:hover {
     border-radius: var(--radius-lg);
     z-index: var(--z-header);
     box-shadow: var(--shadow-lg);
-    transition: all var(--transition-normal);
+    transition: all var(--transition-fast);
     font-size: 14px;
     font-weight: bold;
     display: none;
@@ -166,7 +169,7 @@ a:hover {
     border-radius: var(--radius-lg);
     z-index: var(--z-header);
     box-shadow: var(--shadow-lg);
-    transition: all var(--transition-normal)
+    transition: all var(--transition-fast)
 }
 
 .header-content {
@@ -246,6 +249,7 @@ a:hover {
 
 .theme-toggle {
     background: var(--color-surface-light);
+    color: var(--color-primary);
     border: none;
     border-radius: var(--radius-md);
     width: 40px;
@@ -254,7 +258,6 @@ a:hover {
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    color: var(--color-primary);
     transition: all var(--transition-fast)
 }
 
@@ -284,7 +287,8 @@ a:hover {
 
 .hero-content {
     max-width: 800px;
-    margin: 0 auto
+    margin: 0 auto;
+    transition: all var(--transition-fast)
 }
 
 .hero-image {
@@ -295,9 +299,9 @@ a:hover {
     display: block;
     object-fit: cover;
     box-shadow: var(--shadow-md);
-    transition: transform var(--transition-fast);
-    border: 2px solid #6bbcfb;
-    box-shadow: 0 0 15px rgba(107, 188, 251, 0.5);
+    transition: all var(--transition-fast);
+    border: 1px solid var(--color-accent);
+    box-shadow: 0 0 15px var(--color-accent);
 }
 
 .hero-image:hover {
@@ -358,9 +362,9 @@ a:hover {
     display: flex;
     gap: var(--space-lg);
     align-items: flex-start;
-    transition: all var(--transition-normal);
     border: 2px solid transparent;
-    box-shadow: var(--shadow-sm)
+    box-shadow: var(--shadow-sm);
+    transition: all var(--transition-fast);
 }
 
 .project-card:hover {
@@ -500,7 +504,7 @@ a:hover {
         opacity: 0;
         visibility: hidden;
         transform: translateY(-10px);
-        transition: all var(--transition-normal)
+        transition: all var(--transition-fast)
     }
     .nav-menu.active {
         opacity: 1;
