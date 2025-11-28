@@ -262,7 +262,6 @@ a:hover {
 }
 
 .hero {
-    background-color: var(--color-accent-dark);
     border-radius: var(--radius-lg);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
