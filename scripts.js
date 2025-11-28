@@ -47,7 +47,7 @@ function toggleMobileMenu() {
     const e = "true" === navToggle.getAttribute("aria-expanded");
     navToggle.setAttribute("aria-expanded", !e), navMenu.classList.toggle("active");
     const t = navToggle.querySelectorAll("span");
-    e ? (t[0].style.transform = "none", t[1].style.opacity = "1", t[2].style.transform = "none") : (t[0].style.transform = "rotate(45deg) translate(5px, 5px)", t[1].style.opacity = "0", t[2].style.transform = "rotate(-45deg) translate(7px, -6px)")
+    e ? (t[0].style.transform = "none", t[1].style.opacity = "1", t[2].style.transform = "none") : (t[0].style.transform = "rotate(45deg) translate(5px, 5px)", t[1].style.opacity = "0", t[2].style.transform = "rotate(135deg) translate(-4px, 4px)")
 }
 
 function initTheme() { "light" === localStorage.getItem("theme") && body.classList.add("light-mode") }
@@ -92,23 +92,8 @@ document.addEventListener("keydown", (function(e) {
     ("F12" === e.key || e.ctrlKey && e.shiftKey && "i" === e.key.toLowerCase() || e.ctrlKey && "u" === e.key.toLowerCase()) && (e.preventDefault(), showWarning())
 })), document.addEventListener("contextmenu", (function(e) { e.preventDefault(), showWarning() }));
 
-document.addEventListener('DOMContentLoaded', () => {
-    const sections = document.querySelectorAll('.hero, .section-header, .project-card');
-    const observer = new IntersectionObserver(entries => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.style.opacity = '1';
-                entry.target.style.transform = 'translateY(0)';
-            }
-        });
-    }, { threshold: 0.15 });
 
-    sections.forEach(section => {
-        section.style.opacity = '0';
-        section.style.transform = 'translateY(40px)';
-        section.style.transition = 'opacity 0.6s ease-out, transform 0.6s ease-out';
-        observer.observe(section);
-    });
+document.addEventListener('DOMContentLoaded', () => {
 
     const scrollTopBtn = document.getElementById('scrollTop');
     window.addEventListener('scroll', () => {
