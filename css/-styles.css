@@ -1,79 +1,58 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
 body.light-mode {
-    /* Primary Red (Expressive) */
-    --color-primary: rgb(186 26 26);
+    --color-primary: rgb(103 80 164);
     --color-on-primary: rgb(255 255 255);
-    --color-primary-container: rgb(255 218 212);
-    --color-on-primary-container: rgb(65 0 2);
-    /* Secondary (Cool Complement) */
-    --color-secondary: rgb(118 89 84);
+    --color-primary-container: rgb(234 221 255);
+    --color-on-primary-container: rgb(33 0 93);
+    --color-secondary: rgb(98 91 113);
     --color-on-secondary: rgb(255 255 255);
-    --color-secondary-container: rgb(255 218 212);
-    --color-on-secondary-container: rgb(47 25 21);
-    /* Tertiary (Warm Accent) */
-    --color-tertiary: rgb(112 87 56);
+    --color-secondary-container: rgb(232 222 248);
+    --color-on-secondary-container: rgb(29 25 43);
+    --color-tertiary: rgb(125 82 96);
     --color-on-tertiary: rgb(255 255 255);
-    --color-tertiary-container: rgb(255 224 186);
-    --color-on-tertiary-container: rgb(42 28 0);
-    /* Error (Retained Standard MD3 Error) */
+    --color-tertiary-container: rgb(255 216 228);
+    --color-on-tertiary-container: rgb(49 16 29);
     --color-error: rgb(186 26 26);
     --color-on-error: rgb(255 255 255);
     --color-error-container: rgb(255 218 214);
-    --color-on-error-container: rgb(65 0 2);
-    /* Background & Surface */
+    --color-on-error-container: rgb(147 0 10);
     --color-background: rgb(255 251 254);
     --color-on-background: rgb(29 27 32);
     --color-surface: rgb(255 251 254);
     --color-on-surface: rgb(29 27 32);
-    --color-surface-variant: rgb(245 221 217);
-    --color-on-surface-variant: rgb(73 69 68);
-    --color-outline: rgb(123 117 116);
+    --color-surface-variant: rgb(231 224 236);
+    --color-on-surface-variant: rgb(73 69 79);
+    --color-outline: rgb(121 116 126);
     --color-surface-container: rgb(243 237 247);
-    --color-surface-container-highest: rgb(230 225 228);
-    /* Custom Mappings */
-    --color-accent: var(--color-primary);
-    --color-accent-dark: var(--color-on-primary);
-    --color-text-muted: var(--color-on-surface-variant);
-    --color-surface-light: var(--color-surface-container);
+    --color-surface-container-highest: rgb(225 220 230);
 }
 
 :root {
-    /* Primary Red (Expressive) */
-    --color-primary: rgb(255 180 168);
-    --color-on-primary: rgb(65 0 2);
-    --color-primary-container: rgb(147 0 5);
-    --color-on-primary-container: rgb(255 218 212);
-    /* Secondary (Cool Complement) */
-    --color-secondary: rgb(220 196 189);
-    --color-on-secondary: rgb(69 45 40);
-    --color-secondary-container: rgb(86 64 59);
-    --color-on-secondary-container: rgb(255 218 212);
-    /* Tertiary (Warm Accent) */
-    --color-tertiary: rgb(231 193 148);
-    --color-on-tertiary: rgb(61 43 14);
-    --color-tertiary-container: rgb(86 64 34);
-    --color-on-tertiary-container: rgb(255 224 186);
-    /* Error (Retained Standard MD3 Error) */
+    --color-primary: rgb(208 188 255);
+    --color-on-primary: rgb(56 30 114);
+    --color-primary-container: rgb(79 55 139);
+    --color-on-primary-container: rgb(234 221 255);
+    --color-secondary: rgb(204 194 220);
+    --color-on-secondary: rgb(51 45 65);
+    --color-secondary-container: rgb(74 68 88);
+    --color-on-secondary-container: rgb(232 222 248);
+    --color-tertiary: rgb(239 184 200);
+    --color-on-tertiary: rgb(73 37 50);
+    --color-tertiary-container: rgb(99 59 72);
+    --color-on-tertiary-container: rgb(255 216 228);
     --color-error: rgb(255 180 171);
     --color-on-error: rgb(105 0 5);
     --color-error-container: rgb(147 0 10);
     --color-on-error-container: rgb(255 218 214);
-    /* Background & Surface */
-    --color-background: rgb(20 18 18);
-    --color-on-background: rgb(239 225 223);
-    --color-surface: rgb(20 18 18);
-    --color-on-surface: rgb(239 225 223);
-    --color-surface-variant: rgb(73 69 68);
-    --color-on-surface-variant: rgb(207 196 194);
-    --color-outline: rgb(157 141 138);
-    --color-surface-container: rgb(33 31 31);
-    --color-surface-container-highest: rgb(54 51 51);
-    /* Custom Mappings */
-    --color-accent: var(--color-on-primary-container);
-    --color-accent-dark: var(--color-primary-container);
-    --color-text-muted: var(--color-on-surface-variant);
-    --color-surface-light: var(--color-surface-container);
-    /* Spacing, Radius, etc. (Retained from original file) */
+    --color-background: rgb(20 18 24);
+    --color-on-background: rgb(230 225 229);
+    --color-surface: rgb(20 18 24);
+    --color-on-surface: rgb(230 225 229);
+    --color-surface-variant: rgb(73 69 79);
+    --color-on-surface-variant: rgb(202 196 208);
+    --color-outline: rgb(147 143 153);
+    --color-surface-container: rgb(33 31 38);
+    --color-surface-container-highest: rgb(54 52 59);
     --space-xs: .5rem;
     --space-sm: 1rem;
     --space-md: 1.5rem;
@@ -97,17 +76,13 @@ body.light-mode {
 /* Scroll button */
 
 #scrollTop {
-    background: var(--color-surface-container-highest);
-    /* Mapped from --md-sys-color-surface-container-highest */
-    color: var(--color-primary);
-    /* Mapped from --md-sys-color-primary */
+    background: var(--md-sys-color-surface-container-highest);
+    color: var(--md-sys-color-primary);
 }
 
 #scrollTop:hover {
-    background-color: var(--color-primary);
-    /* Mapped from --md-sys-color-primary */
-    color: var(--color-on-primary);
-    /* Mapped from --md-sys-color-on-primary (assuming this was the intent) */
+    background-color: var(--md-sys-color-primary);
+    color: var(--md-sys-color-on-primary);
 }
 
 #scrollTop {
@@ -115,7 +90,6 @@ body.light-mode {
     bottom: 2rem;
     right: 2rem;
     background: var(--color-surface-light);
-    /* Kept: Custom var defined above */
     color: var(--color-primary);
     border: none;
     border-radius: 50%;
@@ -138,11 +112,21 @@ body.light-mode {
 
 #scrollTop:hover {
     background-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     color: var(--color-accent-dark);
-    /* Kept: Custom var defined above */
     border-radius: var(--radius-md);
 }
+
+
+/* 
+body.light-mode {
+    --color-primary: var(--color-primary-light);
+    --color-background: var(--color-background-light);
+    --color-surface: var(--color-surface-light-theme);
+    --color-surface-light: var(--color-surface-light-light);
+    --color-accent: var(--color-accent-light);
+    --color-accent-dark: var(--color-accent-light-theme);
+    --color-text-muted: var(--color-accent-light)
+} */
 
 *,
 *::before,
@@ -155,7 +139,7 @@ body.light-mode {
 html {
     scroll-behavior: smooth;
     scrollbar-width: thin;
-    scrollbar-color: var(--color-accent) var(--color-surface)/* Kept: Custom var defined above */
+    scrollbar-color: var(--color-accent) var(--color-surface)
 }
 
 body {
@@ -163,8 +147,7 @@ body {
     font-weight: 300;
     font-size: 1rem;
     line-height: 1.6;
-    color: var(--color-on-background);
-    /* Changed from --color-primary to the semantic color for body text */
+    color: var(--color-primary);
     background-color: var(--color-background);
     min-height: 100vh;
     display: flex;
@@ -196,7 +179,6 @@ a {
 
 a:hover {
     color: var(--color-accent);
-    /* Kept: Custom var defined above */
 }
 
 #devtools-warning {
@@ -204,11 +186,9 @@ a:hover {
     top: 20px;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--color-error-container);
-    /* Changed from #ff00004b to a defined color */
+    background: #ff00004b;
     backdrop-filter: blur(10px);
-    color: var(--color-on-error-container);
-    /* Changed from #fff to a defined color */
+    color: #fff;
     padding: 10px 20px;
     border-radius: var(--radius-lg);
     z-index: var(--z-header);
@@ -278,10 +258,9 @@ a:hover {
 }
 
 .nav-toggle span {
-    background-color: var(--color-on-surface);
-    /* Changed from --color-primary to the semantic color */
     width: 24px;
     height: 2px;
+    background-color: var(--color-primary);
     transition: all var(--transition-fast);
     border-radius: 1px
 }
@@ -297,9 +276,7 @@ a:hover {
     display: inline-block;
     padding: .5rem 1rem;
     background-color: var(--color-surface-light);
-    /* Kept: Custom var defined above */
-    color: var(--color-on-surface);
-    /* Changed from --color-primary to the semantic color */
+    color: var(--color-primary);
     border-radius: var(--radius-lg);
     font-weight: 500;
     font-size: .9rem;
@@ -310,17 +287,13 @@ a:hover {
 .nav-link:hover {
     border-radius: var(--radius-md);
     background-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     color: var(--color-accent-dark);
-    /* Kept: Custom var defined above */
     box-shadow: var(--shadow-md)
 }
 
 .theme-toggle {
     background: var(--color-surface-light);
-    /* Kept: Custom var defined above */
-    color: var(--color-on-surface);
-    /* Changed from --color-primary to the semantic color */
+    color: var(--color-primary);
     border: none;
     border-radius: var(--radius-lg);
     width: 40px;
@@ -334,9 +307,7 @@ a:hover {
 
 .theme-toggle:hover {
     background-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     color: var(--color-accent-dark);
-    /* Kept: Custom var defined above */
     border-radius: var(--radius-md)
 }
 
@@ -350,8 +321,6 @@ a:hover {
 
 .hero {
     border-radius: var(--radius-lg);
-    background-color: var(--color-tertiary-container);
-    border: 2px solid var(--color-tertiary);
     padding: var(--space-xl);
     margin-bottom: var(--space-xl);
     text-align: left;
@@ -376,8 +345,7 @@ a:hover {
     object-fit: cover;
     box-shadow: var(--shadow-md);
     transition: all var(--transition-fast);
-    border: 1px solid var(--color-tertiary);
-    /* Changed from --color-accent-light to --color-primary */
+    border: 1px solid var(--color-accent-light);
     shape-rendering: optimizeSpeed;
     border-radius: 25%;
 }
@@ -385,13 +353,12 @@ a:hover {
 .hero-title {
     font-size: 2rem;
     margin-bottom: var(--space-md);
-    color: var(--color-text-muted)/* Kept: Custom var defined above */
+    color: var(--color-text-muted)
 }
 
 .hero-description {
     font-size: 1.1rem;
     color: var(--color-text-muted);
-    /* Kept: Custom var defined above */
     max-width: auto-fit;
     margin: 0 auto
 }
@@ -404,13 +371,12 @@ a:hover {
 .section-div {
     height: 2px;
     background-color: var(--color-surface-light);
-    /* Kept: Custom var defined above */
     border-radius: 6px;
     margin: var(--space-xl) 0
 }
 
 .section-header {
-    background-color: var(--color-surface-light);
+    background-color: var(--color-surface);
     border-radius: var(--radius-lg);
     display: flex;
     flex-direction: column;
@@ -425,13 +391,12 @@ a:hover {
 .section-title {
     font-size: 1.75rem;
     margin-bottom: var(--space-sm);
-    color: var(--color-on-surface)/* Changed from --color-primary to the semantic color */
+    color: var(--color-primary)
 }
 
 .section-subtitle {
     font-size: 1rem;
     color: var(--color-text-muted);
-    /* Kept: Custom var defined above */
     max-width: 600px;
     margin: 0 auto
 }
@@ -449,14 +414,13 @@ a:hover {
     display: flex;
     gap: var(--space-lg);
     align-items: flex-start;
-    border: 2px solid var(--color-surface-light);
+    border: 2px solid transparent;
     box-shadow: var(--shadow-sm);
     transition: all var(--transition-fast);
 }
 
 .project-card:hover {
     border-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     box-shadow: var(--shadow-lg);
 }
 
@@ -468,7 +432,7 @@ a:hover {
     flex-shrink: 0;
     box-shadow: var(--shadow-lg);
     transition: all var(--transition-fast);
-    background-color: var(--color-surface-light)/* Kept: Custom var defined above */
+    background-color: var(--color-surface-light)
 }
 
 .project-content {
@@ -482,12 +446,11 @@ a:hover {
 .project-title {
     font-size: 1.25rem;
     margin-bottom: var(--space-xs);
-    color: var(--color-on-surface)/* Changed from --color-primary to the semantic color */
+    color: var(--color-primary)
 }
 
 .project-description {
     color: var(--color-text-muted);
-    /* Kept: Custom var defined above */
     margin-bottom: var(--space-md);
     line-height: 1.5
 }
@@ -498,9 +461,7 @@ a:hover {
     gap: var(--space-xs);
     padding: .5rem 1rem;
     background-color: var(--color-surface-light);
-    /* Kept: Custom var defined above */
-    color: var(--color-on-surface);
-    /* Changed from --color-primary to the semantic color */
+    color: var(--color-primary);
     border-radius: var(--radius-lg);
     font-weight: 500;
     width: fit-content;
@@ -509,9 +470,7 @@ a:hover {
 
 .project-link:hover {
     background-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     color: var(--color-accent-dark);
-    /* Kept: Custom var defined above */
     border-radius: var(--radius-md);
 }
 
@@ -520,7 +479,6 @@ a:hover {
     padding: var(--space-lg);
     margin-top: auto;
     border-top: 1px solid var(--color-surface-light);
-    /* Kept: Custom var defined above */
     transition: all var(--transition-fast);
 }
 
@@ -536,7 +494,6 @@ a:hover {
 
 .footer-copyright {
     color: var(--color-text-muted);
-    /* Kept: Custom var defined above */
     font-size: .9rem
 }
 
@@ -552,18 +509,14 @@ a:hover {
     width: 40px;
     height: 40px;
     background-color: var(--color-surface-light);
-    /* Kept: Custom var defined above */
-    color: var(--color-text-muted);
-    /* Kept: Custom var defined above */
     border-radius: var(--radius-lg);
+    color: var(--color-text-muted);
     transition: all var(--transition-fast);
 }
 
 .social-link:hover {
     background-color: var(--color-accent);
-    /* Kept: Custom var defined above */
     color: var(--color-accent-dark);
-    /* Kept: Custom var defined above */
     border-radius: var(--radius-md);
 }
 
@@ -710,7 +663,6 @@ a:hover {
     height: 120px;
     border-radius: var(--radius-md);
     background-color: var(--color-surface-light);
-    /* Kept: Custom var defined above */
     display: flex;
     align-items: center;
     justify-content: center;
@@ -732,7 +684,6 @@ a:hover {
     width: 100%;
     height: 100%;
     background: rgba(0, 0, 0, .9);
-    /* Kept for the dark overlay effect */
     display: flex;
     justify-content: center;
     align-items: center;
