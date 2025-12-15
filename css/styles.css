@@ -412,6 +412,7 @@ a:hover {
 }
 
 .project-card:hover {
+    corner-shape: squircle;
     border-color: var(--color-accent);
     box-shadow: var(--shadow-lg);
 }
@@ -422,7 +423,6 @@ a:hover {
     border-radius: var(--radius-md);
     object-fit: cover;
     flex-shrink: 0;
-    box-shadow: var(--shadow-lg);
     transition: all var(--transition-fast);
     background-color: var(--color-surface-light)
 }
