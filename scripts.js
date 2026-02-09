@@ -79,7 +79,7 @@ document.addEventListener("click", (e => {
         e[0].style.transform = "none", e[1].style.opacity = "1", e[2].style.transform = "none"
     }
 })), document.addEventListener("DOMContentLoaded", (() => { initTheme(), initProjects() })), document.querySelectorAll('a[href^="#"]').forEach((e => {
-    e.addEventListener("click", (function(e) {
+    e.addEventListener("click", (function (e) {
         e.preventDefault();
         const t = document.querySelector(this.getAttribute("href"));
         t && (t.scrollIntoView({ behavior: "smooth", block: "start" }), window.innerWidth <= 767 && toggleMobileMenu())
@@ -88,9 +88,11 @@ document.addEventListener("click", (e => {
 const warning = document.getElementById("devtools-warning");
 
 function showWarning() { warning.style.display = "block", setTimeout((() => { warning.style.display = "none" }), 2e3) }
-document.addEventListener("keydown", (function(e) {
+function reloadPage() { location.reload() }
+
+document.addEventListener("keydown", (function (e) {
     ("F12" === e.key || e.ctrlKey && e.shiftKey && "i" === e.key.toLowerCase() || e.ctrlKey && "u" === e.key.toLowerCase()) && (e.preventDefault(), showWarning())
-})), document.addEventListener("contextmenu", (function(e) { e.preventDefault(), showWarning() }));
+})), document.addEventListener("contextmenu", (function (e) { e.preventDefault(), showWarning(), reloadPage() }));
 
 
 document.addEventListener('DOMContentLoaded', () => {
