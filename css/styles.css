@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+
 body.light-mode {
     --color-primary: rgb(186 26 26);
     --color-on-primary: rgb(255 255 255);
@@ -32,6 +33,7 @@ body.light-mode {
 }
 
 :root {
+
     --color-primary: rgb(255 180 168);
     --color-on-primary: rgb(65 0 2);
     --color-primary-container: rgb(147 0 5);
@@ -66,8 +68,8 @@ body.light-mode {
     --space-md: 1.5rem;
     --space-lg: 2rem;
     --space-xl: 3rem;
-    --radius-sm: 6px;
-    --radius-md: 12px;
+    --radius-sm: 8px;
+    --radius-md: 16px;
     --radius-lg: 36px;
     --transition-fast: .2s ease-in-out;
     --shadow-sm: 0 4px 8px rgba(0, 0, 0, .1);
@@ -115,7 +117,7 @@ body.light-mode {
 #scrollTop:hover {
     background-color: var(--color-accent);
     color: var(--color-accent-dark);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
 }
 
 *,
@@ -275,7 +277,7 @@ a:hover {
 }
 
 .nav-link:hover {
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
     background-color: var(--color-accent);
     color: var(--color-accent-dark);
     box-shadow: var(--shadow-md)
@@ -298,7 +300,7 @@ a:hover {
 .theme-toggle:hover {
     background-color: var(--color-accent);
     color: var(--color-accent-dark);
-    border-radius: var(--radius-md)
+    border-radius: var(--radius-sm)
 }
 
 .main {
@@ -412,7 +414,8 @@ a:hover {
 }
 
 .project-card:hover {
-    corner-shape: squircle;
+    /* corner-shape: squircle; */
+    border-radius: var(--radius-md);
     border-color: var(--color-accent);
     box-shadow: var(--shadow-lg);
 }
@@ -463,7 +466,7 @@ a:hover {
 .project-link:hover {
     background-color: var(--color-accent);
     color: var(--color-accent-dark);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
 }
 
 .footer {
@@ -516,11 +519,15 @@ a:hover {
     .projects-grid {
         grid-template-columns: repeat(auto-fit, minmax(600px, 1fr))
     }
+
     .footer-content {
         flex-direction: row;
         justify-content: space-between;
-        text-align: left
+        text-align: left;
+
+
     }
+
 }
 
 @media (max-width:767px) {
@@ -529,18 +536,21 @@ a:hover {
         justify-content: center;
         gap: var(--space-md)
     }
+
     .header-brand h1 {
         font-size: 1.1rem
     }
+
     .nav-toggle {
         display: flex
     }
+
     .nav-menu {
         position: absolute;
         top: 100%;
-        left: 0;
+        left: 1;
         right: 0;
-        background-color: var(--color-surface);
+        border: 2px solid var(--color-surface-light);
         border-radius: var(--radius-md);
         flex-direction: column;
         padding: var(--space-sm);
@@ -551,40 +561,59 @@ a:hover {
         transform: translateY(-10px);
         transition: all var(--transition-fast)
     }
+
     .nav-menu.active {
+        background-color: var(--color-surface);
         opacity: 1;
         visibility: visible;
         transform: translateY(0)
     }
+
     .nav-link {
         width: 100%;
         text-align: center
     }
+
     .main {
         padding: calc(120px + var(--space-lg)) var(--space-sm) var(--space-lg)
     }
+
     .hero {
-        padding: var(--space-lg)
+        flex-direction: column;
     }
-    .hero-description {
-        font-size: 1.5vh;
+
+    .hero.image {
+        width: 100px;
+        height: 100px;
+        margin: 0 auto var(--space-sm)
     }
+
     .hero-title {
-        font-size: 2.5vw;
+        margin-top: var(--space-sm);
+        font-size: auto-fit;
     }
+
+    .hero-description {
+        margin-top: var(--space-sm);
+        font-size: auto-fit;
+    }
+
     .project-card {
         flex-direction: column;
         text-align: center
     }
+
     .project-image {
         width: 100px;
         height: 100px;
         margin: 0 auto var(--space-sm)
     }
+
     .project-link {
         width: 100%;
         justify-content: center
     }
+
     .video-container {
         width: 100px;
         height: 100px;
@@ -597,37 +626,48 @@ a:hover {
         width: calc(100% - 1rem);
         top: .5rem
     }
+
     .header-content {
         padding: var(--space-xs)
     }
+
     .main {
         padding: calc(100px + var(--space-md)) var(--space-xs) var(--space-md)
     }
-    .hero {
+
+    /* .hero {
         padding: var(--space-md)
     }
+
     .hero-content {
         max-width: 90%
     }
+
     .hero-description {
         font-size: 1vh;
     }
+
     .hero-title {
         font-size: 1.5vw;
     }
+
     .hero-image {
         width: 90px;
         height: 90px;
     }
+
     .hero-title {
         font-size: 1.25rem
-    }
+    } */
+
     .section-header {
         padding: var(--space-md)
     }
+
     .section-title {
         font-size: 1.5rem
     }
+
     .project-card {
         padding: var(--space-md)
     }
@@ -638,6 +678,7 @@ a:hover {
         opacity: 0;
         transform: translateY(20px)
     }
+
     to {
         opacity: 1;
         transform: translateY(0)
@@ -696,6 +737,7 @@ a:hover {
     from {
         opacity: 0
     }
+
     to {
         opacity: 1
     }
