@@ -635,7 +635,7 @@ a:hover {
         padding: calc(100px + var(--space-md)) var(--space-xs) var(--space-md)
     }
 
-    /* .hero {
+    .hero {
         padding: var(--space-md)
     }
 
@@ -643,30 +643,11 @@ a:hover {
         max-width: 90%
     }
 
-    .hero-description {
-        font-size: 1vh;
-    }
-
-    .hero-title {
-        font-size: 1.5vw;
-    }
-
     .hero-image {
         width: 90px;
         height: 90px;
     }
 
-    .hero-title {
-        font-size: 1.25rem
-    } */
-
-    .section-header {
-        padding: var(--space-md)
-    }
-
-    .section-title {
-        font-size: 1.5rem
-    }
 
     .project-card {
         padding: var(--space-md)
