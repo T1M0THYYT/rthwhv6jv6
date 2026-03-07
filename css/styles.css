@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Funnel+Sans:ital,wght@0,300..800;1,300..800&family=Google+Sans:ital,opsz,wght@0,17..18,400..700;1,17..18,400..700&family=Montserrat:ital,wght@0,500;1,500&family=Space+Grotesk:wght@300..700&family=Ubuntu&display=swap');
 
 body.light-mode {
-    --color-primary: rgb(186 26 26);
+    --color-primary: rgb(133, 18, 18);
     --color-on-primary: rgb(255 255 255);
     --color-primary-container: rgb(255 218 212);
     --color-on-primary-container: rgb(65 0 2);
@@ -135,9 +135,11 @@ html {
 }
 
 body {
-    font-family: 'Ubuntu Sans Mono', monospace;
-    font-weight: 300;
-    font-size: 1rem;
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+
     line-height: 1.6;
     color: var(--color-on-background);
     background-color: var(--color-background);
@@ -321,7 +323,7 @@ a:hover {
     box-shadow: var(--shadow-md);
     transition: all var(--transition-fast);
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     align-items: center;
 }
 
@@ -334,7 +336,7 @@ a:hover {
 .hero-image {
     width: calc(1vw + 140px);
     height: calc(1vw + 140px);
-    margin-right: var(--space-md);
+    margin: 0 auto var(--space-sm);
     display: block;
     object-fit: cover;
     box-shadow: var(--shadow-md);
@@ -345,16 +347,16 @@ a:hover {
 }
 
 .hero-title {
-    font-size: 2rem;
-    margin-bottom: var(--space-md);
-    color: var(--color-text-muted)
+    font-size: auto-fit;
+    margin-bottom: var(--space-sm);
 }
 
 .hero-description {
     font-size: 1.1rem;
     color: var(--color-text-muted);
     max-width: auto-fit;
-    margin: 0 auto
+
+
 }
 
 .projects-section,
@@ -397,8 +399,8 @@ a:hover {
 
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, minmax(100px, 1fr));
-    grid-gap: var(--space-lg);
+    grid-template-columns: repeat(2, minmax(100px, 0.75fr));
+    grid-gap: var(--space-sm);
 }
 
 .project-card {
@@ -414,16 +416,29 @@ a:hover {
 }
 
 .project-card:hover {
-    /* corner-shape: squircle; */
+    background-color: var(--color-surface-light);
     border-radius: var(--radius-md);
     border-color: var(--color-accent);
     box-shadow: var(--shadow-lg);
+
+    .project-image {
+        background-color: var(--color-on-primary-container);
+        border-radius: var(--radius-lg);
+        border: 2px solid var(--color-accent);
+
+    }
+
+    .project-link {
+        border-color: var(--color-accent);
+    }
+
 }
 
 .project-image {
     width: 120px;
     height: 120px;
     border-radius: var(--radius-md);
+    border: 2px solid var(--color-surface-light);
     object-fit: cover;
     flex-shrink: 0;
     transition: all var(--transition-fast);
@@ -445,17 +460,20 @@ a:hover {
 }
 
 .project-description {
+    font-size: 1rem;
     color: var(--color-text-muted);
-    margin-bottom: var(--space-md);
+    margin-bottom: auto;
     line-height: 1.5
 }
 
 .project-link {
     display: inline-flex;
     align-items: center;
+    margin-top: var(--space-sm);
     gap: var(--space-xs);
     padding: .5rem 1rem;
-    background-color: var(--color-surface-light);
+    background-color: var(--color-background);
+    border: 2px solid var(--color-surface-light);
     color: var(--color-on-surface);
     border-radius: var(--radius-lg);
     font-weight: 500;
@@ -524,8 +542,6 @@ a:hover {
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
-
-
     }
 
 }
@@ -578,34 +594,14 @@ a:hover {
         padding: calc(120px + var(--space-lg)) var(--space-sm) var(--space-lg)
     }
 
-    .hero {
-        flex-direction: column;
-    }
-
-    .hero.image {
-        width: 100px;
-        height: 100px;
-        margin: 0 auto var(--space-sm)
-    }
-
-    .hero-title {
-        margin-top: var(--space-sm);
-        font-size: auto-fit;
-    }
-
-    .hero-description {
-        margin-top: var(--space-sm);
-        font-size: auto-fit;
-    }
-
     .project-card {
         flex-direction: column;
         text-align: center
     }
 
     .project-image {
-        width: 100px;
-        height: 100px;
+        width: fit;
+        height: fit;
         margin: 0 auto var(--space-sm)
     }
 
