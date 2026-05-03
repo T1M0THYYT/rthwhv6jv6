@@ -548,7 +548,7 @@ a:hover {
 .social-link:hover {
     background-color: var(--color-accent);
     color: var(--color-accent-dark);
-    border-radius: var(--radius-md);
+    border-radius: var(--radius-sm);
 }
 
 @media (min-width:768px) {
