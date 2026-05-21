@@ -3,10 +3,9 @@ const navToggle = document.querySelector(".nav-toggle"),
     themeToggle = document.getElementById("themeToggle"),
     body = document.body,
     projectsData = [{
-        title: "My Minecraft Texture Packs:",
-        subtitle: "List of packs i made oveer the past 2-3 years. Click the 'View' button to see more details and download.",
+        title: "My Minecraft Content:",
+        subtitle: "List of content i made oveer the past 2-3 years. Click the 'View' button to see more details and download.",
         projects: [
-
             {
                 title: "Toggle Night Vision Pack",
                 description: "Want to see caves but too lazy to get torches? This pack makes easier for you to see in dark places without them!",
@@ -31,14 +30,12 @@ const navToggle = document.querySelector(".nav-toggle"),
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/java-subtitles",
                 image: "https://media.forgecdn.net/avatars/thumbnails/1556/676/256/256/639010090774649421.png"
             },
-
             {
                 title: "Force Locator Bar Pack",
                 description: "Forcibly enables the Locator Bar Feature on Servers and Worlds.",
                 link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/force-locator-bar",
                 image: "https://media.forgecdn.net/avatars/thumbnails/1522/367/256/256/638988606284989720.png"
             },
-
             {
                 title: "Better Enchant Pack",
                 description: "Utility resource pack to view enchant names and quickly swap items after enchanting!",
@@ -48,11 +45,9 @@ const navToggle = document.querySelector(".nav-toggle"),
             {
                 title: "Pause Screen Fix Pack",
                 description: "Swap the marketplace button with the settings button.",
-                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/pause-screen-fixer`",
+                link: "https://www.curseforge.com/minecraft-bedrock/texture-packs/pause-screen-fixer",
                 image: "https://media.forgecdn.net/avatars/thumbnails/1497/790/256/256/638972949331132938.jpg"
             },
-
-
             {
                 title: "Timer Hud",
                 description: "Display a timer at the top of the screen! Can also be used when speedrunning :p",
