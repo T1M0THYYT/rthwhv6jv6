@@ -109,6 +109,7 @@ function createProjectCard(project) {
 
 function createSection(sectionData) {
     const header = createElement("div", "section-header");
+
     const title = createElement("h2", "section-title");
     title.textContent = sectionData.title;
     header.appendChild(title);
@@ -118,9 +119,15 @@ function createSection(sectionData) {
     header.appendChild(subtitle);
 
     const grid = createElement("div", "projects-grid");
-    sectionData.projects.forEach(project => {
-        grid.appendChild(createProjectCard(project));
+
+    sectionData.projects.forEach((project, index) => {
+        const card = createProjectCard(project);
+
+        card.style.setProperty("--card-index", index);
+
+        grid.appendChild(card);
     });
+
     return {
         section: header,
         grid
@@ -170,6 +177,19 @@ function initProjects() {
     projects.appendChild(grid);
 }
 
+function initScrollTop() {
+    const scrollTopBtn = document.getElementById("scrollTop");
+    if (!scrollTopBtn) {
+        return;
+    }
+    window.addEventListener("scroll", () => {
+        scrollTopBtn.classList.toggle("show", window.scrollY > 300);
+    });
+    scrollTopBtn.addEventListener("click", () => {
+        window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+}
+
 document.addEventListener("click", event => {
     if (!navToggle.contains(event.target) && !navMenu.contains(event.target)) {
         resetMobileMenuIcon();
@@ -188,6 +208,7 @@ window.addEventListener("resize", () => {
 document.addEventListener("DOMContentLoaded", () => {
     initTheme();
     initProjects();
+    initScrollTop();
 });
 
 document.querySelectorAll('a[href^="#"]').forEach(link => {
