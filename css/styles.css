@@ -205,7 +205,7 @@ a:hover {
     left: 50%;
     transform: translateX(-50%);
     width: calc(100% - 2rem);
-    max-width: 1800px;
+    max-width: 1200px;
     backdrop-filter: blur(16px);
     background-color: rgba(31, 20, 19, .6);
     background-color: rgb(from var(--color-surface-container) r g b / .6);
@@ -378,10 +378,11 @@ a:hover {
 .main {
     flex: 1;
     padding: calc(80px + var(--space-lg)) var(--space-lg) var(--space-xl);
-    max-width: 1800px;
+    max-width: 1600px;
     margin: 0 auto;
     width: 100%;
 }
+
 
 @media (max-width: 600px) {
     .main {
@@ -577,6 +578,22 @@ a:hover {
     border-radius: var(--shape-full);
 }
 
+.banner-img {
+    border: 1px solid var(--color-outline-variant);
+    border-radius: var(--shape-expressive-1);
+    display: flex;
+    width: 100%;
+    height: 100%;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: var(--space-lg);
+    text-align: center;
+    box-shadow: var(--shadow-sm);
+    transition: box-shadow var(--transition-fast);
+    animation: fadeInExpressive var(--duration-long) var(--motion-spring) both;
+}
+
+
 .section-header {
     background-color: var(--color-surface-container);
     border: 1px solid var(--color-outline-variant);
@@ -602,7 +619,6 @@ a:hover {
     font-size: 1rem;
     color: var(--color-text-muted);
     max-width: 600px;
-    margin: 0 auto
 }
 
 .commission-section {
@@ -619,16 +635,26 @@ a:hover {
 }
 
 .commission-grid {
+    display: flex;
+    /* Better for horizontal sliding than grid */
     overflow-x: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    scroll-snap-type: x mandatory;
     gap: var(--space-md);
-    margin-top: var(--space-md);
-    width: 100%;
+    padding-bottom: var(--space-sm);
+    /* Hide scrollbars */
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+
+.commission-grid::-webkit-scrollbar {
+    display: none;
 }
 
 .commission-card {
     position: relative;
+    flex: 0 0 calc(100% - 2rem);
+    /* Full width on mobile */
+    scroll-snap-align: center;
     min-height: 220px;
     aspect-ratio: 16 / 10;
     overflow: hidden;
@@ -707,7 +733,7 @@ a:hover {
 .commission-card:focus-within {
     border-radius: var(--shape-xs);
     border-color: var(--color-accent);
-    box-shadow: var(--shadow-lg);
+    box-shadow: var(--shadow-sm);
     transform: translateY(-4px) scale(1.015);
 }
 
@@ -927,6 +953,10 @@ a:hover {
         flex-direction: row;
         justify-content: space-between;
         text-align: left;
+    }
+
+    .commission-card {
+        flex: 0 0 320px;
     }
 }
 
